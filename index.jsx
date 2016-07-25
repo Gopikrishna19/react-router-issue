@@ -1,6 +1,6 @@
 const {Link, Route, Router, hashHistory} = ReactRouter;
 
-const App = ({children}) =>
+const App = () =>
   <div>
     <h1>App</h1>
     <Link to="/sub-page">Sub Page</Link>
