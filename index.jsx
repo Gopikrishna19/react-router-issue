@@ -1,9 +1,9 @@
 const {Link, Route, Router, hashHistory} = ReactRouter;
 
-const App = () =>
+const App = ({children}) =>
   <div>
     <h1>App</h1>
-    <Link to="sub-page">Sub Page</Link>
+    <Link to="/sub-page">Sub Page</Link>
   </div>
 
 const SubPage = () =>
@@ -13,9 +13,8 @@ const SubPage = () =>
   
 const Routes = () =>
   <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <Route path="sub-page" component={SubPage} />
-    </Route>
+    <Route path="/" component={App} />
+    <Route path="/sub-page" component={SubPage} />
   </Router>
 
 ReactDOM.render(
