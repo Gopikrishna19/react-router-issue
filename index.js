@@ -7,8 +7,7 @@ var Router = _ReactRouter.Router;
 var hashHistory = _ReactRouter.hashHistory;
 
 
-var App = function App(_ref) {
-  var children = _ref.children;
+var App = function App() {
   return React.createElement(
     "div",
     null,
