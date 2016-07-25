@@ -1,7 +1,5 @@
 "use strict";
 
-// Code goes here
-
 var _ReactRouter = ReactRouter;
 var Link = _ReactRouter.Link;
 var Route = _ReactRouter.Route;
@@ -9,7 +7,8 @@ var Router = _ReactRouter.Router;
 var hashHistory = _ReactRouter.hashHistory;
 
 
-var App = function App() {
+var App = function App(_ref) {
+  var children = _ref.children;
   return React.createElement(
     "div",
     null,
@@ -20,7 +19,7 @@ var App = function App() {
     ),
     React.createElement(
       Link,
-      { to: "sub-page" },
+      { to: "/sub-page" },
       "Sub Page"
     )
   );
@@ -42,11 +41,8 @@ var Routes = function Routes() {
   return React.createElement(
     Router,
     { history: hashHistory },
-    React.createElement(
-      Route,
-      { path: "/", component: App },
-      React.createElement(Route, { path: "sub-page", component: SubPage })
-    )
+    React.createElement(Route, { path: "/", component: App }),
+    React.createElement(Route, { path: "/sub-page", component: SubPage })
   );
 };
 
